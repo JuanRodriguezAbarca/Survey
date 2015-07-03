@@ -1,1 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><answers><answer id="1" isCorrect="false">1) not too much</answer><answer id="6" isCorrect="false">1) la vecina de enfrente</answer><answer id="11" isCorrect="true">1) Un monumento</answer></answers>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<answers>
+	<answer id="1" isCorrect="false">1) not too much</answer>
+	<answer id="6" isCorrect="false">1) la vecina de enfrente</answer>
+	<answer id="11" isCorrect="true">1) Un monumento</answer>
+</answers>
