@@ -1,0 +1,33 @@
+<questions>
+  <question> 
+  	<text>How cleaver is Bartek?</text>
+    <answers>
+      <answer id="1" isCorrect ="false">1) not too much</answer>
+      <answer id="2" isCorrect = "true">2) chuj knows</answer>
+      <answer id="3" isCorrect = "false">3) maybe</answer>
+      <answer id="4" isCorrect = "false">4) Who is Bartek?</answer>
+      <answer id="5" isCorrect = "false">5) Yes</answer>
+    </answers>
+  </question>
+  <question> 
+  	<text>Sabes quien esta loca?</text>
+    <answers>
+      <answer id="6" isCorrect ="false">1) la vecina de enfrente</answer>
+      <answer id="7" isCorrect = "false">2) El pendejo del badajo</answer>
+      <answer id="8" isCorrect = "false">3) Mi minda en tu paladar</answer>
+      <answer id="9" isCorrect = "true">4) Mi p**la en tu boca</answer>
+      <answer id="10" isCorrect = "false">5) Co???</answer>
+    </answers>
+  </question>
+  
+  <question> 
+  	<text>Que se merece mi jefe?</text>
+    <answers>
+      <answer id="11" isCorrect ="true">1) Un monumento</answer>
+      <answer id="12" isCorrect = "false">2) Una patada en el culo</answer>
+      <answer id="13" isCorrect = "false">3) Por que no te callas</answer>
+      <answer id="14" isCorrect = "false">4) Si</answer>
+      <answer id="15" isCorrect = "false">5) Ku**a hiszpan, nits nie rozumiesz</answer>
+    </answers>
+  </question>
+</questions>
