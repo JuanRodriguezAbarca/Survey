@@ -1,9 +1,11 @@
 package firstProgram;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
+import javax.swing.JOptionPane;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -60,13 +62,18 @@ public class XmlEditor {
 				.newInstance();
 		Transformer transformer = transformerFactory.newTransformer();
 		DOMSource source = new DOMSource(doc);
-		StreamResult result = new StreamResult(new File("src\\firstProgram\\"
-				+ fileName + ".xml"));
-		transformer.transform(source, result);
+		FileOutputStream fos = new FileOutputStream("src\\firstProgram\\"
+				+ fileName + ".xml");
+//		StreamResult result = new StreamResult(new File("src\\firstProgram\\"
+//				+ fileName + ".xml"));
+		transformer.transform(source, new StreamResult(fos));
 		if(fileName!="temp"){
-			System.out.println("file saved!");
+//			System.out.println("file saved!");
+			JOptionPane.showMessageDialog(null,"file saved!");
 
 		}
+		fos.flush();
+		fos.close();
 	}
 
 }
