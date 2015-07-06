@@ -20,7 +20,6 @@ public class XmlFileLoader {
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			doc = dBuilder.parse(in);
-			
 		}
 		
 		return doc;

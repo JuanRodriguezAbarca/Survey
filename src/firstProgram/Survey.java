@@ -51,7 +51,7 @@ public class Survey {
 			List<Answer> answers = question.getAnswers();
 			for (Answer answer : answers) {
 				i++;
-				questionComposer[i]=answer.getAnswer();
+				questionComposer[i]="\t"+answer.getAnswer();
 //				System.out.println(answer.getAnswer());
 			}
 			Answer answer = getAnswerFromuser(answers, questionComposer);
@@ -72,8 +72,14 @@ public class Survey {
 		String[] finalScreen = new String[questions.size()+4];
 		producer.xmlRestltsProducer(answersSelected);
 //		System.out.println("Generating results...\n");
+		
 		JOptionPane.showMessageDialog(null,"Wait for the results...");
-//		Thread.sleep(5000);
+
+		
+		Thread.sleep(3000);
+		
+		JOptionPane.showMessageDialog(null,"Wait for the results...");
+
 		Document docA = loader.loadXML("temp.xml");
 		List<Answer> answFromXLM = parser.parseAnswerResultsXML(docA);
 		

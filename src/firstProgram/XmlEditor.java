@@ -1,7 +1,6 @@
 package firstProgram;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -9,6 +8,7 @@ import javax.swing.JOptionPane;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -61,19 +61,27 @@ public class XmlEditor {
 		TransformerFactory transformerFactory = TransformerFactory
 				.newInstance();
 		Transformer transformer = transformerFactory.newTransformer();
+//		doc.setXmlStandalone(true);
 		DOMSource source = new DOMSource(doc);
-		FileOutputStream fos = new FileOutputStream("src\\firstProgram\\"
-				+ fileName + ".xml");
-//		StreamResult result = new StreamResult(new File("src\\firstProgram\\"
-//				+ fileName + ".xml"));
-		transformer.transform(source, new StreamResult(fos));
+
+		StreamResult result = new StreamResult(new File("src\\firstProgram\\"
+				+ fileName + ".xml"));
+		
+		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+		transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+		transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount","4");
+		
+		transformer.transform(source, result);
 		if(fileName!="temp"){
 //			System.out.println("file saved!");
 			JOptionPane.showMessageDialog(null,"file saved!");
 
 		}
-		fos.flush();
-		fos.close();
+//		fos.flush();
+//		fos.close();
+
+//		transformer.reset();
+		
 	}
 
 }
